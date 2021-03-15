@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Dictionary.DictionaryActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/dictionary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/cardViewMarginSides"
+        android:layout_marginEnd="@dimen/cardViewMarginSides"
+        android:layout_marginBottom="@dimen/cardViewMarginBottom"
+        app:strokeWidth="@dimen/stroke_width"
+        app:strokeColor="@color/primaryColor"
+        app:cardElevation="@dimen/cardViewElevation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--        android:clickable="true"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dictionaryWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="@style/dictionaryWord"/>
+
+            <TextView
+                android:id="@+id/dictionaryReading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textAppearance="@style/dictionarySubTitles"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/dictionaryPartOfSpeech"
+                    android:layout_width="@dimen/dictionary_match_constraint"
+                    android:layout_height="@dimen/dictionary_match_constraint"
+                    android:layout_marginEnd="@dimen/dictionaryPartOfSpeechMarginEnd"
+                    android:gravity="center"
+                    android:text="@string/n_a"
+                    android:textAppearance="@style/dictionarySubTitles"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/dictionaryMeaning"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/dictionaryMeaning"
+                    android:layout_width="@dimen/dictionary_match_constraint"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dictionaryMeaningMarginStart"
+                    android:gravity="center"
+                    android:minLines="5"
+                    android:textAppearance="@style/dictionarySubTitles"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/dictionaryPartOfSpeech"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/primaryColor</item>
+    </style>
+    <style name="dictionaryWord" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="android:textColor">@color/primaryTextColor</item>
+    </style>
+
+    <style name="dictionarySubTitles" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@color/primaryTextColor</item>
+    </style>
+
+    <style name="newsTitle" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@color/primaryTextColor</item>
+    </style>
+
+    <style name="vocabularyWord" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@color/primaryTextColor</item>
+    </style>
+
+</resources>

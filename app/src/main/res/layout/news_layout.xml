@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".News.MainActivity">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/newsArticle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/cardViewMarginSides"
+        android:layout_marginEnd="@dimen/cardViewMarginSides"
+        android:layout_marginBottom="@dimen/cardViewMarginBottom"
+
+        app:cardElevation="@dimen/cardViewElevation"
+        app:strokeWidth="@dimen/stroke_width"
+        app:strokeColor="@color/primaryColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/articleImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/news_match_constraint"
+        android:contentDescription="@string/news_pic"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/articleTitle"
+        app:layout_constraintDimensionRatio="h,2:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:padding="@dimen/newsCardViewTitlePadding"
+        android:id="@+id/articleTitle"
+        android:layout_width="@dimen/news_match_constraint"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minLines="4"
+        android:textAppearance="@style/newsTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/articleImage" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

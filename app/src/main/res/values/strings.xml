@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">japanese-learning-app</string>
+    <string name="nav_news">News</string>
+    <string name="nav_vocabulary">Vocabulary List</string>
+    <string name="nav_dictionary">Dictionary</string>
+    <string name="nav_camera">Camera</string>
+    <string name="category">Category</string>
+    <string name="category_default">General</string>
+    <string name="news_pic">A picture of the news article</string>
+    <string name="word_to_search">Word</string>
+    <string name="search_ic">A icon of magnifying glass to represent a search icon</string>
+    <string name="bin_delete">A icon of a bin to represent delete</string>
+    <string name="n_a">N/A</string>
+</resources>

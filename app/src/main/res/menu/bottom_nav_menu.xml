@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_news"
+        android:icon="@drawable/ic_article_white_24dp"
+        android:title="@string/nav_news" />
+
+    <item
+        android:id="@+id/navigation_vocabulary"
+        android:icon="@drawable/ic_list_white_24dp"
+        android:title="@string/nav_vocabulary" />
+
+    <item
+        android:id="@+id/navigation_dictionary"
+        android:icon="@drawable/ic_book_white_24dp"
+        android:title="@string/nav_dictionary" />
+
+    <item
+        android:id="@+id/navigation_camera"
+        android:icon="@drawable/ic_camera_alt_24dp"
+        android:title="@string/nav_camera" />
+
+</menu>

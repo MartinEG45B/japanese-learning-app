@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dictionary.DictionaryActivity"
+    android:id="@+id/activity_dictionary">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="@dimen/nav_match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/navigation_margin"
+        android:layout_marginEnd="@dimen/navigation_margin"
+        android:background="@color/primaryColor"
+        app:itemIconTint="@color/primaryIconColor"
+        app:itemTextColor="@color/primaryIconColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <EditText
+        android:id="@+id/txtSearch"
+        android:layout_width="@dimen/dictionary_match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dictionaryEditTextMarginStartLand"
+        android:layout_marginTop="@dimen/dictionaryEditTextMarginTop"
+        android:hint="@string/word_to_search"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnSearch"
+        android:layout_width="@dimen/dictionary_match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dictionaryImageBtnMarginStartLand"
+        android:layout_marginTop="@dimen/dictionaryImageBtnMarginTop"
+        android:layout_marginEnd="@dimen/dictionaryImageBtnMarginEndLand"
+        android:background="@drawable/round_style"
+        android:contentDescription="@string/search_ic"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtSearch"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_search_white_24dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dictionaryRecyclerView"
+        android:layout_width="@dimen/recyclerview_match_constraint"
+        android:layout_height="@dimen/recyclerview_match_constraint"
+        android:layout_marginStart="@dimen/recyclerViewMargin"
+        android:layout_marginTop="@dimen/recyclerViewMargin"
+        android:layout_marginEnd="@dimen/recyclerViewMargin"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSearch" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
